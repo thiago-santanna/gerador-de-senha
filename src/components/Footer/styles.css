@@ -17,3 +17,9 @@
     height: auto;
     border-radius: 6px;
 }
+
+.f-contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
