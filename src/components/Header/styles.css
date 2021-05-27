@@ -1,0 +1,17 @@
+.h-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    border-bottom: 1px solid #c4c4c4;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.h-container img {
+    max-width: 470px;
+    max-height: 110px;
+    width: auto;
+    height: auto;
+    border-radius: 6px;
+}
