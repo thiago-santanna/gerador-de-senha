@@ -27,6 +27,7 @@ code {
 
 main {
   flex-grow: 1;
+  min-height: 360px;
 }
 
 
