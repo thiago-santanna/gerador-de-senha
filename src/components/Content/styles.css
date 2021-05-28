@@ -11,6 +11,7 @@
     flex-direction: column;
     gap: .5rem;
     margin: 1rem 0 1rem 0;
+    width: inherit;
 }
 
 .selectors-items {
@@ -27,6 +28,14 @@
 
 .selectors-items label {
     width: 4rem;
+}
+
+.selectors-items input[type="range"] {
+    flex-grow: 1;
+}
+
+.selectors-items span {
+    width: 2ch;
 }
 
 .btn {
