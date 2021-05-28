@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Password from '../Password/indext'
 import './styles.css'
 
 const Content = () => {
@@ -55,7 +56,7 @@ const Content = () => {
                               type="range"
                               name="letras"
                               min={8}
-                              max={16}
+                              max={32}
                               value={digitos}
                               onChange={ ({target}) => {setDigitos(Number(target.value))}} />
                             <span>{digitos}</span>
@@ -90,7 +91,7 @@ const Content = () => {
                     <button className="btn btn-gerador">Gerar Senha</button>
                     <button className="btn btn-copy">Copiar Senhas</button>
 
-                    <h1 className="password">{password}</h1>
+                    <Password password={password} />
                 </div>
             </main>        
         </>
