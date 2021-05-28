@@ -18,3 +18,15 @@
     text-align: center;
     font-size: 1.75rem;
 }
+
+.passwordBox .letra {
+    color: #000;
+}
+
+.passwordBox .numero {
+    color: #00ff15;
+}
+
+.passwordBox .simbolo {
+    color: #ff0000;
+}

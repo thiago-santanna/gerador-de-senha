@@ -3,10 +3,10 @@ import Password from '../Password/indext'
 import './styles.css'
 
 const Content = () => {
-    const [digitos, setDigitos] = useState(8)
-    const [qtdNumero, setQtdNumero] = useState(2)
-    const [qtdSimbolo, setQtdSimbolo] = useState(2)
-    const [password, setPassword] = useState('teste@1020#Tskl5')
+    const [digitos, setDigitos] = useState(16)
+    const [qtdNumero, setQtdNumero] = useState(4)
+    const [qtdSimbolo, setQtdSimbolo] = useState(4)
+    const [password, setPassword] = useState('')
 
     useEffect(() => {
         const psw =[]
@@ -42,6 +42,10 @@ const Content = () => {
         return Math.random() >= 0.5 ? digito : digito.toUpperCase()
     }
 
+    const handleCopyPassword = (password) => {
+        navigator.clipboard.writeText(password)
+    }
+
     return (
         <>
             <main>
@@ -68,7 +72,7 @@ const Content = () => {
                               type="range"
                               name="numeros"
                               min={0}
-                              max={4}
+                              max={6}
                               value={qtdNumero}
                               onChange={ ({target}) =>{setQtdNumero(Number(target.value))} } />
                             <span>{qtdNumero}</span>
@@ -80,7 +84,7 @@ const Content = () => {
                               type="range"
                               name="simbolos"
                               min={0}
-                              max={4}
+                              max={6}
                               value={qtdSimbolo}
                               onChange={ ({target}) => { setQtdSimbolo(Number(target.value)) }} />
                             <span>{qtdSimbolo}</span>
@@ -88,8 +92,9 @@ const Content = () => {
 
                     </div>
 
-                    <button className="btn btn-gerador">Gerar Senha</button>
-                    <button className="btn btn-copy">Copiar Senhas</button>
+                    <button className="btn btn-copy" onClick={() => handleCopyPassword(password)}>
+                        Copiar Senha
+                    </button>
 
                     <Password password={password} />
                 </div>
